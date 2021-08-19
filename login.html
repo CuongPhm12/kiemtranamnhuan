@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ten=prompt("Mời bạn nhập tên");
+    if (ten == "Admin" ){
+        alert("Mời bạn nhập mật khẩu");
+        let matkhau=prompt("Mời bạn nhập vào mật khẩu");
+        if(matkhau=="TheMaster"){
+            alert("Welcome");
+            if(matkhau==null){
+                alert("cancled");
+            }
+            }else{
+            alert("Wrong Password");
+        }
+    if(ten == null){
+        alert("Cancled");
+    }
+    }else {
+        alert("I dont know you")
+    }
+
+</script>
+</body>
+</html>
