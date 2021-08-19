@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>"what is the official name of JavaScript?"</p>
+<input type="text" placeholder="Nhập câu trả lời" id="ans" onchange="a();">
+<script>
+
+function a(){
+    let ans = document.getElementById("ans").value;
+if (ans == "ECMAScript"){
+    alert("Right");
+}else {
+    alert("Did you know? ECMAScript!");
+}
+}
+
+</script>
+</body>
+</html>
