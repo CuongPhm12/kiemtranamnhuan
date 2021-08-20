@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <img id="myImage" src="doraemon.jpg" style="position:absolute;left:0; top:0;" height="250" width="210"/>
+</head>
+<body onload="docReady()">
+<!--Bước 1: Chèn ảnh nobita.jpg vào-->
+<!--<form action="">-->
+<!--    <img src="doraemon.jpg" alt="khong hien thi duoc anh" id="myImage" height="250" width="210">-->
+
+<!--</form>-->
+<script>
+let imgObj = null;
+imgObj = document.getElementById("myImage");
+imgObj.style.position = 'relative';
+imgObj.style.left = "0 px";
+// Bước 2: Xây dựng các hàm xử lý khi nhấn phím lên
+function upArrowPressed(){
+    let element = document.getElementById("myImage");
+    element.style.top = parseInt(element.style.top) - 5 + "px";
+}
+// Bước 3: Xây dựng các hàm xử lý khi nhấn phím xuống
+function downArrowPressed(){
+    let element = document.getElementById("myImage");
+    element.style.top = parseInt(element.style.top) + 5 + "px";
+}
+// Bước 4: Xây dựng các hàm xử lý khi nhấn phím phải
+function rightArrowPressed(){
+    let element = document.getElementById("myImage");
+    element.style.left = parseInt(element.style.left) + 5 + "px";
+}
+// Bước 5: Xây dựng các hàm xử lý khi nhấn phím trái
+function lefttArrowPressed(){
+    let element = document.getElementById("myImage");
+    element.style.left = parseInt(element.style.left) - 5 + "px";
+}
+// Bước 6: Xây dựng các hàm nhận các phím
+function moveSelection(evt){
+    switch (evt.keyCode){
+        case 37:
+            lefttArrowPressed();
+            break;
+        case 39:
+            rightArrowPressed();
+            break;
+        case 38:
+            upArrowPressed();
+            break;
+        case 40:
+            downArrowPressed();
+            break;
+    }
+}
+// Bước 7: Xây dựng hàm doReady()
+function docReady(){
+    window.addEventListener('keydown',moveSelection);
+}
+</script>
+</body>
+</html>
