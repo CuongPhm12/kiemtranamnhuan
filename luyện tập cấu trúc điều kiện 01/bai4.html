@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 4: Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó-->
+<script>
+    let a = prompt("nhập số nguyên bất kỳ a");
+    a = parseInt(a);
+    let b = prompt("nhập số nguyên bất kỳ b ");
+    b = parseInt(b);
+    let c = prompt("nhập số nguyên bất kỳ c");
+    c = parseInt(c);
+    let max = a;
+    if(b>max) {
+        if (c > max) {
+            alert(c + " là số lớn nhất");
+        } else {
+            alert(b + " là số lớn nhất");
+        }
+    }else{
+        alert(a + " là số lớn nhất");
+    }
+</script>
+</body>
+</html>

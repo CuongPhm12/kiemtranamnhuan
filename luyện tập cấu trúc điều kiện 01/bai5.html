@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ-->
+<script>
+    let scr = prompt("Nhập vào điểm kiểm tra");
+    scr = parseFloat(scr);
+    let mid = prompt("Nhập vào điểm thi giữa kỳ");
+    mid = parseFloat(mid);
+    let last = prompt("Nhập vào điểm thi cuối kỳ");
+    last = parseFloat(last);
+    let avg = (scr+2*mid+3*last)/6;
+    alert("Điểm Tổng kết kỳ là " + avg);
+    if(avg<0 || avg>10 ){
+        alert("Không xác định");
+    }else if (avg>=8){
+        alert("bạn đạt loại Giỏi");
+    }else if(avg>=6){
+                alert("ban đạt loại Khá");
+    }else if(avg>=5){
+                    alert("bạn đạt loại TB");
+    }else if(avg>=3.5){
+                        alert("bạn đạt loại Kém");
+    }else {
+        alert("bạn đạt loại Yếu");
+    }
+
+
+
+</script>
+</body>
+</html>
