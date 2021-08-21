@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Viết chương trình tính giá điện.-->
+<!--Bậc 1: Cho kWh từ 0 - 50-->
+<!--1.678-->
+<!--Bậc 2: Cho kWh từ 51 - 100-->
+<!--1.734-->
+<!--Bậc 3: Cho kWh từ 101 - 200-->
+<!--2.014-->
+<!--Bậc 4: Cho kWh từ 201 - 300-->
+<!--2.536-->
+<!--Bậc 5: Cho kWh từ 301 - 400-->
+<!--2.834-->
+<!--Bậc 6: Cho kWh từ 401 trở lên-->
+<!--2.927-->
+<script>
+    let eNumber = prompt("Nhập vào số điện");
+    eNumber = parseFloat(eNumber);
+    if(eNumber>0 && eNumber<=50){
+        let total = eNumber*1678;
+        alert("Đơn giá: 1.678 vnđ")
+        alert("Số tiền phải thanh toán" + total + "vnd");
+    }else if(eNumber>50 && eNumber<=100){
+        let total = 50*1678 + (eNumber-50)*1734;
+        alert("Đơn giá: 50 số đầu 1.678 vnđ; 50 số tiếp theo: 1.734 vnđ")
+        alert("Số tiền phải thanh toán" + total + "vnd");
+    }else if(eNumber>100 && eNumber<=200){
+        let total = 50*1678 + 50*1734 + (eNumber-100)*2014;
+        alert("Đơn giá: 50 số đầu 1.678 vnđ; 50 số tiếp theo: 1.734 vnđ, 100 số tiếp theo: 2.014 đ")
+        alert("Số tiền phải thanh toán" + total + "vnd");
+    }else if(eNumber>200 && eNumber<=300){
+        let total = 50*1678 + 50*1734 + 100*2014 + (eNumber-100)*2536;
+        alert("Đơn giá: 50 số đầu 1.678 vnđ; 50 số tiếp theo: 1.734 vnđ, " +
+            "100 số tiếp theo: 2.014 đ, 100 số tiếp theo :2.536đ")
+        alert("Số tiền phải thanh toán" + total + "vnd");
+    }else if(eNumber>300 && eNumber<=400){
+        let total = 50*1678 + 50*1734 + 100*2014 + 100*2536 + (eNumber-100)*2834;
+        alert("Đơn giá: 50 số đầu 1.678 vnđ; 50 số tiếp theo: 1.734 vnđ, " +
+            "100 số tiếp theo: 2.014 đ, 100 số tiếp theo :2.536đ, 100 số tiếp theo:2.834đ")
+        alert("Số tiền phải thanh toán" + total + "vnd");
+    }else if(eNumber>400){
+        let total = 50*1678 + 50*1734 + 100*2014 + 100*2536 + 100*2834 + (eNumber-100)*2927;
+        alert("Đơn giá: 50 số đầu 1.678 vnđ; 50 số tiếp theo: 1.734 vnđ, " +
+            "100 số tiếp theo: 2.014 đ, 100 số tiếp theo :2.536đ, 100 số tiếp theo:2.834đ, 100 số tiếp theo:2.927đ")
+                alert("Số tiền phải thanh toán" + total + "vnd");
+    } else{
+        alert("Không xác định");
+    }
+</script>
+</body>
+</html>

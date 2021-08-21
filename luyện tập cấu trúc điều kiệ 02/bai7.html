@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 7: Giải phương trình bậc 2.-->
+<script>
+    let a = prompt("Nhập a");
+    let b = prompt("Nhập b");
+    let c = prompt("Nhập c");
+    a = parseFloat(a);
+    b = parseFloat(b);
+    c = parseFloat(c);
+    // Bước 1: Tính Δ=b2-4ac
+    let delta = b*b - 4*a*c;
+    // Bước 2: So sánh Δ với 0
+    // Δ < 0 => phương trình (1) vô nghiệm
+    // Δ = 0 => phương trình (1) có nghiệm kép
+    // Δ > 0 => phương trình (1) có 2 nghiệm phân biệt, ta dùng công thức nghiệm sau:
+if(delta<0){
+    alert("Phương trình vô nghiệm");
+}else if(delta==0){
+    let result1 = -b/(2*a);
+    alert("Phương trình có nghiệm kép là " + result1);
+}else{
+    let result2 = (-b+ Math.sqrt(delta))/(2*a);
+    let result3 = (-b- Math.sqrt(delta))/(2*a);
+    alert("Phương trình có 2 nghiệm");
+    alert("Nghiệm 1 là " + result2);
+    alert("Nghiệm 2 là " + result3);
+}
+</script>
+</body>
+</html>

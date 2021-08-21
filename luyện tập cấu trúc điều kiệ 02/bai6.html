@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 6: Giải phương trình bậc 1.-->
+<script>
+    let a = prompt("Mời nhập vào a");
+    a = parseFloat(a);
+    let b = prompt("Mời nhập vào b");
+    b= parseFloat(b);
+    if(a==0){
+        alert("Phương trình vô nghiệm");
+    }else if(a!=0){
+        let result = -b/a
+        alert("Phương trình có 1 nghiệm là " + result);
+    } else{
+        alert("Không xác định");
+    }
+</script>
+</body>
+</html>

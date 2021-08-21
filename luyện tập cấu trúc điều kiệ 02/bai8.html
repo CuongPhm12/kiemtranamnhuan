@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không.
+ Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.-->
+<script>
+    let age = prompt('Mời bạn nhập 1 số nguyên bất kỳ');
+    age = parseInt(age);
+    if(age>0 && age<120){
+        alert(age + " là số tuổi của một người");
+    }else{
+        alert("Rất tiếc, đây không phải là số tuổi của một người");
+    }
+</script>
+</body>
+</html>

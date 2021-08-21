@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác.
+Điều kiện để a,b,c là cạnh của một tam giác là:-->
+
+<!--a,b,c > 0-->
+<!--a + b > c-->
+<!--b + c > a-->
+<!--a + c > b-->
+<script>
+    let a = prompt("Nhập vào số bất kỳ");
+    let b = prompt("Nhập vào số bất kỳ");
+    let c = prompt("Nhập vào số bất kỳ");
+    a=parseFloat(a);
+    b=parseFloat(b);
+    c=parseFloat(c);
+    if(a>0 && b>0 && c>0){
+        if(a+b>c){
+            if(a+c>b){
+                if(a+c>b){
+                    alert(a+";"+b + ";" + c+ " là 3 cạnh của 1 tam giác ");
+                }else{
+                    alert(a +" ; "+ b + " ; " + c+ " KHÔNG PHẢI là 3 cạnh của 1 tam giác ");
+                }
+            }else{
+                alert(a +";"+ b + ";" + c+ " KHÔNG PHẢI là 3 cạnh của 1 tam giác ");
+            }
+        }else{
+            alert(a +";"+ b + ";" + c+ " KHÔNG PHẢI là 3 cạnh của 1 tam giác ");
+        }
+
+    }else{
+        alert(a +";"+ b + ";" + c+ " KHÔNG PHẢI là 3 cạnh của 1 tam giác ");
+    }
+
+</script>
+</body>
+</html>

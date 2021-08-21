@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 11: Viết chương trình tính thuế thu nhập cá nhân.-->
+<!--Đến 05 5%-->
+<!--Trên 05 đến 10 10%-->
+<!--Trên 10 đến 18 15%-->
+<!--Trên 18 đến 32 20%-->
+<!--Trên 32 đến 52 25%-->
+<!--Trên 52 đến 80 30%-->
+<!--Trên 80 35%-->
+<script>
+    let salary=prompt("Mời bạn nhập vào lương dạng số");
+    salary = parseInt(salary);
+    if(salary>0 &&salary<=5000000){
+        alert("Thuế TNCN là 5%");
+        let tax = (salary*5)/100;
+        alert("Thuế TNCN phải nộp là " + tax);
+    }else if(salary>5000000 && salary<=10000000){
+        alert("Thuế TNCN là 10%");
+        let tax = (salary*10)/100;
+        alert("Thuế TNCN phải nộp là " + tax);
+    }else if(salary>10000000 && salary<=18000000){
+        alert("Thuế TNCN là 15%");
+        let tax = (salary*15)/100;
+        alert("Thuế TNCN phải nộp là " + tax);
+    }else if(salary>18000000 && salary<=32000000){
+        alert("Thuế TNCN là 20%");
+        let tax = (salary*20)/100;
+        alert("Thuế TNCN phải nộp là " + tax);
+    }else if(salary>32000000 && salary<=52000000){
+        alert("Thuế TNCN là 25%");
+        let tax = (salary*25)/100;
+        alert("Thuế TNCN phải nộp là " + tax);
+    }else if(salary>52000000 && salary<=80000000){
+        alert("Thuế TNCN là 30%");
+        let tax = (salary*30)/100;
+        alert("Thuế TNCN phải nộp là " + tax);
+    }else if(salary>80000000){
+        alert("Thuế TNCN là 35%");
+        let tax = (salary*35)/100;
+        alert("Thuế TNCN phải nộp là " + tax);
+    }else{
+        alert("Không xác định");
+    }
+</script>
+
+</body>
+</html>
