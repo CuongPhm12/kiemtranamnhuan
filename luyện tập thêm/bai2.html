@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho phép người dùng nhập vào số ngày công và lựa chọn bậc lương (A, B, C, D)-->
+<!--Tạo 1 function tính lương của nhân viên theo công thức như sau:-->
+<!--Bậc A: 5triệu* số ngày công/22-->
+<!--Bậc B: 6triệu* số ngày công/23-->
+<!--Bậc B: 8triệu* số ngày công/23-->
+<!--Bậc D: 10triệu* số ngày công/23-->
+<form action="">
+    Ngày công <input type="text" placeholder="Mời bạn nhập vào số ngày công" size="35px" id="dayNum"><br>
+    Bậc lương <select name="" id="level">
+    <option value="1" >Bậc A</option>
+    <option value="2" >Bậc B</option>
+    <option value="3" >Bậc C</option>
+    <option value="4" >Bậc D</option>
+</select>
+    <button onclick="salaryFunc();">Tính lương</button>
+</form>
+<script>
+    function salaryFunc(){
+       let sa = document.getElementById("level");
+       let salaryLevel = sa.options[sa.selectedIndex].value;
+       let dayNum = document.getElementById('dayNum').value;
+       dayNum = parseFloat(dayNum);
+       switch (salaryLevel){
+           case "1":
+               let salary1 = (5000000*dayNum)/22;
+               alert("Lương của bạn là " + salary1);
+               break;
+           case "2":
+               let salary2  = (6000000*dayNum)/23;
+               alert("Lương của bạn là " + salary2);
+               break;
+           case "3":
+               let salary3  = (8000000*dayNum)/23;
+               alert("Lương của bạn là " + salary3);
+               break;
+           case "4":
+               let salary4  = (10000000*dayNum)/23;
+               alert("Lương của bạn là " + salary4);
+               break;
+           default:
+               alert("Không xác định");
+               break;
+       }
+    }
+</script>
+</body>
+</html>
