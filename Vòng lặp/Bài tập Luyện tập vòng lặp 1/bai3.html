@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Hiển thị  20 số trong dãy fibonacci</title>
 </head>
 <body>
+<script>
 
+        let count = parseInt(prompt('Nhập count'));
+        let num1 = 0;
+        let num2 = 1;
+        let num3;
+        for (i = 0; i < count; i++) {
+            num3 = num1 + num2;
+            num1 = num2;
+            num2 = num3;
+            document.writeln(num3 );
+        }
+</script>
 </body>
 </html>
