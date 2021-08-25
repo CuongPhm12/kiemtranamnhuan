@@ -5,7 +5,19 @@
 <!--Bước 4: Trong khi count < numbers thì:-->
 <!--Kiểm tra xem N có phải là số nguyên tố không. Nếu N là số nguyên tố thì in ra giá trị của N và tăng giá trị của count lên 1-->
 <!--Giá trị của N tăng lên 1 để kiểm tra số tiếp theo-->
-// let numbers = prompt("Nhập 1 giá trị từ bàn phím");
-// let count = 0;
-// let n = 2;
-
+let count = 0;
+let N = 2;
+while (count<20){
+    let check = false;
+    for (i=2; i<=Math.sqrt(N) ;i++ ) {
+        if (N % i === 0) {
+            check = true;
+            break;
+        }
+    }
+    if (check === false) {
+        document.writeln(N);
+        count++;
+    }
+    N++;
+}

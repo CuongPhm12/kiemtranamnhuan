@@ -6,15 +6,26 @@
 </head>
 <body>
 <script>
-    // in ra 5 số chia hết cho 2 đầu tiên
-    let number = 0
-    for (let i = 0; i <5 ; ) {
-        if(number%2==0){
-            document.write(number);
-            i++
-        }
-        number++
+    // // in ra 5 số chia hết cho 2 đầu tiên
+    // let number = 0
+    // for (let i = 0; i <5 ; ) {
+    //     if(number%2==0){
+    //         document.write(number);
+    //         i++
+    //     }
+    //     number++
+    // }
+    let num = 0;
+    let i=0;
+    let N = prompt("Nhập vào số nguyên bất kỳ");
+    N = parseInt(N);
+    while(i<N){
+        if(num%2==0){
+        document.writeln(num);
+        i++
+    }num++
     }
+
 </script>
 </body>
 </html>
